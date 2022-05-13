@@ -28,6 +28,7 @@ while(True):
     print("17: Imprimir todos los numeros impares hasta el numero deseado")
     print("18: Imprimir todos los numeros pares hasta el numero deseado")
     print("19: Todos los numeros cuadrados del 1 al 30")
+    print("20: La suma de los numeros cuadrados del 1 al 100")
     print("99: Finalizar programa")
     print("                                                     ")
     print("                                                     ")
@@ -382,6 +383,13 @@ while(True):
       print("")
       n4 = input("ENTER para continuar")
       os.system("clear")   
+    if choice=="20":
+      print("")
+      print("La suma de los 100 primeros numeros cuadrados")
+      print("Resultado: 338350")
+      print("")
+      n4 = input("ENTER para continuar")
+      os.system("clear") 
     if choice=="99":
       print("")
       print("Gracias por participar")
