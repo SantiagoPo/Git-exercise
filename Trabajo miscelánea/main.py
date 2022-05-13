@@ -264,8 +264,8 @@ while(True):
       if b == 0:
         print("El divisor no puede ser 0")
       
-
-      print("El cociente de la división es",str(a/b))
+      else:
+       print("El cociente de la división es",str(a/b))
       print("")
       n4 = input("Enter para continuar")
       os.system("clear") 
