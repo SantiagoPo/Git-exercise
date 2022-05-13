@@ -29,6 +29,8 @@ while(True):
     print("18: Imprimir todos los numeros pares hasta el numero deseado")
     print("19: Todos los numeros cuadrados del 1 al 30")
     print("20: La suma de los numeros cuadrados del 1 al 100")
+    print("21: 2 numeros naturales")
+    print("22: Sumar numeros de forma infinita hasta el 0")
     print("99: Finalizar programa")
     print("                                                     ")
     print("                                                     ")
