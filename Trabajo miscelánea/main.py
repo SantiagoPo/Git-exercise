@@ -407,6 +407,30 @@ while(True):
   
 
     
+      if choice=="6":
+          print("Digite dos numeros")
+          n1=int(input('Digite el número inicial de la secuencia \n'))
+          n2=int(input('Digite el número final de la secuencia \n'))  
+          nums=[]
+          for i in range(n1, n2 + 1):
+            nums.append(i)
+          print('\n La secuencia ascendente de los números es:', nums)
+          n4 = input("ENTER para continuar")
+          os.system("clear") 
+      if choice=="7":
+        while True:
+          print("digite digites para sumar infinitamente hasta el cero")
+          nums=[]
+          while True:
+              n=float(input('Digite el número a sumar, para concluir la suma por favor digite 0:'))
+              if n!=0:
+                  nums.append(n)
+              else:
+                  break
+          print('Los números digitados fueron:', nums)
+          print('La suma de los números fue:', sum(nums))
+          n4 = input("Enter para continuar")
+          os.system("clear")
     if choice=="d":    
       print("")
       print("[1]: Numeros aleatorios") 
@@ -416,19 +440,24 @@ while(True):
       print("")
       choice=input("Ingrese el numero de la seccion la cual desea ingresar: ")
       if choice=="1":
-        
-
-        print("")
-        lista = []
-        print("ingrese un numero")
-        n1 = int(input())
-        for i in range(n1):
-          n = random.randint(1, 99999)
-          lista.append(n)
-          list.sort(lista)
-        print(lista)
-        n4 = input("ENTER para continuar")
-        os.system("clear")
+            nums=[]
+            aux=None
+            while True:
+                cant=int(input('Ingrese la cantidad de números que desea ver\n'))
+                for i in range(cant):
+                    n=random.randint(-100,100)
+                    nums.append(n)
+                print(nums)
+                for i in range(len(nums)-1):
+                  for i in range(len(nums)-1):
+                    if nums[i]>=nums[i+1]:
+                      aux=nums[i+1]
+                      nums[i+1]=nums[i]
+                      nums[i]=aux
+                print(nums)
+                break
+            n4 = input("ENTER para continuar")
+            os.system("clear")
   
     
       if choice=="2":
