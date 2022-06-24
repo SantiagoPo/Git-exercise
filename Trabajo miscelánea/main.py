@@ -421,7 +421,6 @@ while(True):
           n4 = input("ENTER para continuar")
           os.system("clear") 
       if choice=="7":
-        while True:
           print("digite digites para sumar infinitamente hasta el cero")
           nums=[]
           while True:
