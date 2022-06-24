@@ -9,13 +9,14 @@ while(True):
     print("")
     print("[99] Finalizar programa")
     print("")
-  
+    
     choice=input("Ingresar letra o numero de la seccion a la cual desea ingresar: ") 
-
+    
     import os
     import random
-
+    os.system("clear")
     if choice=="a":
+      print("[OPERADORES]")
       print("")
       print("[1]: Area y altura de un triangulo ")
       print("[2]: Sumas")
@@ -146,6 +147,7 @@ while(True):
   
   
     if choice=="b":    
+      print("[CONDICIONALES]")
       print("")
       print("[1]: Numeros positivos o negativos ")
       print("[2]: Numeros mayores o menores")
@@ -334,6 +336,7 @@ while(True):
 
 
     if choice=="c":
+      print("[CICLOS]")
       print("")
       print("[1]: Imprimir todos los multiplos de 3 hasta 100 ")
       print("[2]: Imprimir todos los numeros impares hasta el numero deseado")
@@ -432,11 +435,15 @@ while(True):
           n4 = input("Enter para continuar")
           os.system("clear")
     if choice=="d":    
+      print("[ARREGLOS]")
       print("")
       print("[1]: Numeros aleatorios") 
       print("[2]: Organizacion de elementos en inversa")
       print("[3]: Organizacion de numero de menor a mayor, mayor a menor y de menor a mayor ")
       print("[4]: En arreglo decir cual es mayor y cual es menor")
+      print("[5]: Convertir numeros ingresados en *")
+      print("[6]: Identificar cantidad de veces que aparece un número en un arreglo")
+      print("[7]: Identificar si un número es impar y par")
       print("")
       choice=input("Ingrese el numero de la seccion la cual desea ingresar: ")
       if choice=="1":
@@ -569,6 +576,54 @@ while(True):
         print(f"Del arreglo {lista} el mayor es {mayor} y el menor es {menor}")
 
         n4 = input("Enter para continuar")
+        os.system("clear")
+      if choice=="5":
+        nums=[]
+        n1 = int(input("Ingresar la cantidad de numeros de desea ingresar: "))
+        for i in range(n1):
+          n=int(input('Digite un numero: '))
+          nums.append(n)
+        for i in nums:
+          print(i,'->',i*'*')
+        n4 = input("Enter para continuar")
+        os.system("clear")
+      if choice=="6":
+          counts=dict()
+          nums=[]
+          n3 = int(input("Ingrese el rango de numeros que desea tener en el buscador"))
+          for i in range(n3):
+              n=int(input('Digite un numero: '))
+              nums.append(n)
+          for num in nums :
+              counts [num] = counts.get (num, 0) + 1
+          x=int(input('Ingrese el número que desea buscar: \n'))
+          try:
+            print('el número {} está {} veces'.format(x, counts[x]))
+          except:
+            print('no se encontró el número {} en la lista'.format(x))
+          n4 = input("Enter para continuar")
+          os.system("clear")
+      if choice=="7":
+        print("Digite Sus 8 Numeros")
+        valores = 8
+        valor1 = 0
+        impar = []
+        par = []
+        lista = []
+        while valor1 < valores:
+          print("Llevas Digitado", (valor1 + 1), "Numeros")
+          enteros = int(input())
+          lista.append(enteros)
+          valor1 += 1
+        for i in range(valores):
+          if lista[i] % 2 == 0:
+            par.append(lista[i])
+          else:
+            impar.append(lista[i])
+        impar.sort()
+        par.sort()
+        print("El Arreglo Que Diste Fue: \n"+ str(lista),"\n""Los Numeros Impares Del Arreglo Son: \n"+ str(impar),"\n""Los Numeros Pares Del Arreglo Son: \n"+ str(par))
+        n4 = input("ENTER para continuar")
         os.system("clear")
     if choice=="99":
         print("")
